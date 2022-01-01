@@ -1,0 +1,41 @@
+{
+    "name": "sschreier/administration-dashboard",
+    "description": "a extension which customizing the administration dashboard",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Sebastian Schreier",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/administration": "~6.4.7"
+    },
+    "extra": {
+        "shopware-plugin-class": "Sschreier\\AdministrationDashboard\\SschreierAdministrationDashboard",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "label": {
+            "de-DE": "Individualisieren des Dashboards der Administration",
+            "en-GB": "customizing the administration dashboard"
+        },
+        "description": {
+            "de-DE": "Über die Erweiterung kann man sich das Dashboard der Administration individualisieren. Sie bietet dazu unter \"Einstellungen\" -> \"System\" > \"Benutzer & Rechte\" -> \"Rollen\" im Bereich \"Zusätzliche Berechtigungen\" einen neuen Bereich \"Dashboard\" an, bei dem man sich für die ausgewählte Rolle folgende Bereiche des Dashboards ausblenden lassen kann: die Begrüßung, den Banner, die Checkliste, das Feedback, die Statistik des Tages, die Statistiken der Bestellungen und die Statistiken des Umsatzes. Das \"Administrator\"-Konto sieht immer alle Bereiche des Dashboards, da es keine eigene Rolle besitzt.",
+            "en-GB": "The administration dashboard can be customized via the extension. For this purpose, it offers under \"Settings\" -> \"System\"> \"Users & permissions\" -> \"Roles\" in the area \"Additional permissions\" a new area \"Dashboard\" in which you can hide the following areas of the dashboard for the selected role: the greeting, the banner, the checklist area, the feedback area, the today's statistics, the statistics of the orders and the statistics of the turnover. The \"Administrator\" account always see all areas of the dashboard, because he has no own role."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        },
+        "supportLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sschreier\\AdministrationDashboard\\": "src/"
+        }
+    }
+}
