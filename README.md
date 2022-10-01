@@ -13,13 +13,31 @@ The _Administrator_ account always see all areas on the dashboard, because he ha
 
 ## How to install the extension
 ### via console (recommended)
-
 1. Download the latest _SschreierAdministrationDashboard-master.zip_.
 2. Unzip the zip file and rename the folder to _SschreierAdministrationDashboard_.
 3. Move the folder to the project folder _custom/plugins/_ .
 4. Connect to the console via ssh:
 
 ```
+bin/console plugin:refresh
+bin/console plugin:install --activate SschreierAdministrationDashboard
+```
+
+### via composer
+1. Add the repository URL to the composer.json of the project
+```
+"repositories": [
+    ...,
+    {
+        "type": "vcs",
+        "url": "https://github.com/sschreier/SschreierAdministrationDashboard"
+    }
+],
+```
+
+2. Connect to the console via ssh and install the plugin source code via the command
+```
+composer require sschreier/administration-dashboard
 bin/console plugin:refresh
 bin/console plugin:install --activate SschreierAdministrationDashboard
 ```

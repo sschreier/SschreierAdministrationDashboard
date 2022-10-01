@@ -16,6 +16,7 @@
     "extra": {
         "shopware-plugin-class": "Sschreier\\AdministrationDashboard\\SschreierAdministrationDashboard",
         "plugin-icon": "src/Resources/config/plugin.png",
+        "copyright": "Sebastian Schreier",
         "label": {
             "de-DE": "Individualisieren des Dashboards der Administration",
             "en-GB": "customizing the administration dashboard"
