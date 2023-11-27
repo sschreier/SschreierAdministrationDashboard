@@ -8,10 +8,6 @@ if (Shopware.Service('privileges')) {
                 privileges: [],
                 dependencies: []
             },
-            campaign_banner: {
-                privileges: [],
-                dependencies: []
-            },
             welcome: {
                 privileges: [],
                 dependencies: []

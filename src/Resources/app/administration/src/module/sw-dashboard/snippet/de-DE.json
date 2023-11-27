@@ -4,7 +4,6 @@
             "dashboard": {
                 "label": "Dashboard",
                 "intro": "Begrüßung ausblenden",
-                "campaign_banner": "Banner ausblenden",
                 "welcome": "Checkliste ausblenden",
                 "feedback": "Feedback ausblenden",
                 "stats_today": "Statistik des Tages ausblenden",

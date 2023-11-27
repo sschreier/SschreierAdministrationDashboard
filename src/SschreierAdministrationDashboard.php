@@ -1,9 +1,11 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
-    namespace Sschreier\AdministrationDashboard;
+namespace Sschreier\AdministrationDashboard;
 
     use Shopware\Core\Framework\Plugin;
 
-    class SschreierAdministrationDashboard extends Plugin {
+    class SschreierAdministrationDashboard extends Plugin
+    {
 
     }

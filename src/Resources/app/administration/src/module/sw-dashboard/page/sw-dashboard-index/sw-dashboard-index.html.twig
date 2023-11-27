@@ -1,0 +1,49 @@
+{% block sw_dashboard_index %}
+    {% block sw_dashboard_index_before %}{% endblock %}
+    <div class="sw-page__outer">
+        {% block sw_dashboard_index_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_index_inner_after %}{% endblock %}
+    </div>
+    {% block sw_dashboard_index_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_index_content_intro_card %}
+    {% block sw_dashboard_index_content_intro_card_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.intro')">
+        {% block sw_dashboard_index_content_intro_card_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_index_content_intro_card_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_index_content_intro_card_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_index_content_info_grid %}
+    {% block sw_dashboard_index_content_info_grid_before %}{% endblock %}
+    <template v-if="acl.can('admin') || (!acl.can('dashboard.welcome') || !acl.can('dashboard.feedback'))">
+        {% block sw_dashboard_index_content_info_grid_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_index_content_info_grid_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_index_content_info_grid_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_index_content_info__grid_inner_welcome_card %}
+    {% block sw_dashboard_index_content_info__grid_inner_welcome_card_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.welcome')">
+        {% block sw_dashboard_index_content_info__grid_inner_welcome_card_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_index_content_info__grid_inner_welcome_card_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_index_content_info__grid_inner_welcome_card_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_index_content_grid_info_inner_feedback_card %}
+    {% block sw_dashboard_index_content_grid_info_inner_feedback_card_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.feedback')">
+        {% block sw_dashboard_index_content_grid_info_inner_feedback_card_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_index_content_grid_info_inner_feedback_card_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_index_content_grid_info_inner_feedback_card_after %}{% endblock %}
+{% endblock %}

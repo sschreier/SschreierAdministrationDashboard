@@ -1,0 +1,25 @@
+.sw-page__outer {
+    position: relative;
+    height: 100%;
+
+    .sw-dashboard-index__welcome-text {
+        margin-bottom: 32px;
+    }
+
+    .sw-dashboard-index__card-grid {
+        margin-top: 0;
+    }
+
+    .sw-card {
+        display: none;
+
+        &.sw-dashboard-statistics__statistics-count,
+        &.sw-dashboard-statistics__statistics-sum {
+            display: block;
+        }
+    }
+
+    .sw-dashboard-statistics__card-headline + div > .sw-card {
+        display: block;
+    }
+}

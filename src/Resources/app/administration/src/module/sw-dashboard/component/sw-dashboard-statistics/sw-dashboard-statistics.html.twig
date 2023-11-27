@@ -1,0 +1,49 @@
+{% block sw_dashboard_statistics_intro_stats_headline %}
+    {% block sw_dashboard_statistics_intro_stats_headline_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.stats_today')">
+        {% block sw_dashboard_statistics_intro_stats_headline_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_statistics_intro_stats_headline_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_statistics_intro_stats_headline_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_statistics_intro_stats_today %}
+    {% block sw_dashboard_statistics_intro_stats_today_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.stats_today')">
+        {% block sw_dashboard_statistics_intro_stats_today_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_statistics_intro_stats_today_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_statistics_intro_stats_today_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_statistics_grid %}
+    {% block sw_dashboard_statistics_grid_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.stats_today')">
+        {% block sw_dashboard_statistics_grid_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_statistics_grid_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_statistics_grid_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_statistics_count %}
+    {% block sw_dashboard_statistics_count_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.statistics_count')">
+        {% block sw_dashboard_statistics_count_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_statistics_count_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_statistics_count_after %}{% endblock %}
+{% endblock %}
+
+{% block sw_dashboard_statistics_sum %}
+    {% block sw_dashboard_statistics_sum_before %}{% endblock %}
+    <template v-if="acl.can('admin') || !acl.can('dashboard.statistics_sum')">
+        {% block sw_dashboard_statistics_sum_inner_before %}{% endblock %}
+        {% parent() %}
+        {% block sw_dashboard_statistics_sum_inner_after %}{% endblock %}
+    </template>
+    {% block sw_dashboard_statistics_sum_after %}{% endblock %}
+{% endblock %}
