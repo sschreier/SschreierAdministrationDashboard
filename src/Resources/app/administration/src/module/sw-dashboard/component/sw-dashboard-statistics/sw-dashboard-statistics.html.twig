@@ -18,16 +18,6 @@
     {% block sw_dashboard_statistics_intro_stats_today_after %}{% endblock %}
 {% endblock %}
 
-{% block sw_dashboard_statistics_grid %}
-    {% block sw_dashboard_statistics_grid_before %}{% endblock %}
-    <template v-if="acl.can('admin') || !acl.can('dashboard.stats_today')">
-        {% block sw_dashboard_statistics_grid_inner_before %}{% endblock %}
-        {% parent() %}
-        {% block sw_dashboard_statistics_grid_inner_after %}{% endblock %}
-    </template>
-    {% block sw_dashboard_statistics_grid_after %}{% endblock %}
-{% endblock %}
-
 {% block sw_dashboard_statistics_count %}
     {% block sw_dashboard_statistics_count_before %}{% endblock %}
     <template v-if="acl.can('admin') || !acl.can('dashboard.statistics_count')">
