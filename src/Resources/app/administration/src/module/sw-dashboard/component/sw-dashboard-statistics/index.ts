@@ -1,11 +1,9 @@
-import './../../acl';
-
 import template from './sw-dashboard-statistics.html.twig';
 
-Shopware.Component.override('sw-dashboard-statistics', {
+export default {
     template,
 
     inject: {
         acl: 'acl'
     },
-});
+};

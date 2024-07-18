@@ -7,5 +7,4 @@ namespace Sschreier\AdministrationDashboard;
 
     class SschreierAdministrationDashboard extends Plugin
     {
-
     }

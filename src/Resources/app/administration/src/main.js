@@ -1,2 +1,3 @@
-import './module/sw-dashboard/page/sw-dashboard-index';
-import './module/sw-dashboard/component/sw-dashboard-statistics';
+import './module/sw-dashboard/acl';
+
+import './module/sw-dashboard/';

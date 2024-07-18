@@ -1,33 +1,32 @@
-if (Shopware.Service('privileges')) {
-    Shopware.Service('privileges').addPrivilegeMappingEntry({
+Shopware.Service('privileges')
+    .addPrivilegeMappingEntry({
         category: 'additional_permissions',
         parent: null,
         key: 'dashboard',
         roles: {
             intro: {
-                privileges: [],
+                privileges: ['dashboard:intro'],
                 dependencies: []
             },
             welcome: {
-                privileges: [],
+                privileges: ['dashboard:welcome'],
                 dependencies: []
             },
             feedback: {
-                privileges: [],
+                privileges: ['dashboard:feedback'],
                 dependencies: []
             },
             stats_today: {
-                privileges: [],
+                privileges: ['dashboard:stats:today'],
                 dependencies: []
             },
             statistics_count: {
-                privileges: [],
+                privileges: ['dashboard:statistics:count'],
                 dependencies: []
             },
             statistics_sum: {
-                privileges: [],
+                privileges: ['dashboard:statistics:sum'],
                 dependencies: []
             }
         }
     });
-}

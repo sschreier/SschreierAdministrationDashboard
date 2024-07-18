@@ -10,6 +10,9 @@
         margin-top: 0;
     }
 
+    /*
+     * necessary for the "Today's statistics" from sw-dashboard-statistics, otherwise only the headline and the intro will be hidden, but not the table
+     */
     .sw-card {
         display: none;
 
