@@ -1,7 +1,7 @@
 {
     "name": "sschreier/administration-dashboard",
-    "description": "a extension which customizing the administration dashboard",
-    "version": "1.2.2",
+    "description": "customizing the administration dashboard",
+    "version": "1.2.3",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [
